@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: rgb(195, 169, 83);
-  color: white;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,15 +18,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: rgb(44, 20, 8);
+  background-color: rgba(255, 255, 255, 0.07);
   padding: 20px;
-  border-radius: 5px;
-  width: 50%;
+  border-radius: 15px;
+  width: 90%;
   max-width: 600px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 h1 {
   font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
 }
 
 .user-container {
@@ -39,17 +43,30 @@ h1 {
 .user-input-container {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 #user-input {
   width: 80%;
   padding: 0.4rem;
   border-radius: 5px;
+  border: none;
+  background: #1e2a38;
+  color: white;
 }
 
 #search-btn {
-  padding: 0.4rem;
+  padding: 0.4rem 1rem;
   cursor: pointer;
+  background-color: #1f4068;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#search-btn:hover {
+  background-color: #1b9aaa;
 }
 
 .progress {
@@ -70,14 +87,22 @@ h1 {
   margin-top: 8px;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #fff;
+  color: #f0f0f0;
 }
 
+
+
+/* Progress Levels with Gradient */
+
+.progress-item span {
+  position: relative;
+  z-index: 2;
+}
 .progress-item {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 4px solid #8a9b3e;
+  border: 4px solid #ffffff55;
   position: relative;
   display: flex;
   align-items: center;
@@ -89,17 +114,15 @@ h1 {
     #299f5d var(--progress-degree, 0%),
     #283a2e 0%
   );
-}
+    z-index: 9;
 
-.progress-item span {
-  position: relative;
-  z-index: 2;
 }
 
 .card {
-  background: #8a8155;
+  background: #1e2a38;
   margin: 10px;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
 }
